@@ -1,0 +1,8 @@
+{
+  "mevm": {
+    "SimpleStorage": {
+      "address": "0xd37f15e6f2E5F4A624bbb9864f56bbd2e9b201b5",
+      "startBlock": 32190696
+    }
+  }
+}

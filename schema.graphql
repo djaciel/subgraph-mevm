@@ -1,0 +1,15 @@
+type NumRetrieved @entity(immutable: true) {
+  id: Bytes!
+  num: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type NumSet @entity(immutable: true) {
+  id: Bytes!
+  num: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}

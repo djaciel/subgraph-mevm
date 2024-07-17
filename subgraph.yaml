@@ -1,0 +1,29 @@
+specVersion: 1.0.0
+indexerHints:
+  prune: auto
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: SimpleStorage
+    network: mevm
+    source:
+      address: "0xd37f15e6f2E5F4A624bbb9864f56bbd2e9b201b5"
+      abi: SimpleStorage
+      startBlock: 32190696
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - NumRetrieved
+        - NumSet
+      abis:
+        - name: SimpleStorage
+          file: ./abis/SimpleStorage.json
+      eventHandlers:
+        - event: NumRetrieved(indexed uint256)
+          handler: handleNumRetrieved
+        - event: NumSet(indexed uint256)
+          handler: handleNumSet
+      file: ./src/simple-storage.ts
